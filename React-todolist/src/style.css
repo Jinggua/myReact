@@ -1,0 +1,63 @@
+/* .show {
+    animation: show-item 2s ease-in forwards
+}
+.hide {
+    animation: hide-item 2s ease-in forwards
+}
+
+@keyframes show-item{
+    0% {
+        opacity: 0;
+        color: red
+    }
+    50% {
+        opacity: 0.5;
+        color: green
+    }
+    100% {
+        opacity: 1;
+        color: red
+    }
+}
+@keyframes hide-item{
+    0% {
+        opacity: 1;
+        color: rgb(0, 162, 255)
+    }
+    50% {
+        opacity: 0.5;
+        color: rgb(235, 89, 32)
+    }
+    100% {
+        opacity: 0;
+        color: rgb(198, 235, 139)
+    }
+} */
+
+/* 还没入场,即将入场的一瞬间 */
+.fade-enter {
+    opacity: 0;
+}
+ /*入场到完成之前  */
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 1s ease-in
+} 
+.fade-enter-done {
+    opacity: 1;
+}
+
+/* 出场第一个时刻, 出场第一个时刻刚执行, 这时候还应该是显示的*/
+.fade-exit {
+    opacity: 1;
+} 
+/* 出场动画执行过程中, 这个类都会存在 此时的 opacity 应该为 0*/
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 1s ease-in
+} 
+.fade-exit-done {
+    opacity: 0; 
+}
+
+/* onEntered 在入场动画执行完成之后, 自动执行 */
